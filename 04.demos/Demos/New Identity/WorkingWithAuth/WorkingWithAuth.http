@@ -1,0 +1,30 @@
+@WorkingWithAuth_HostAddress = http://localhost:5105
+
+GET {{WorkingWithAuth_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+### Register a new user
+POST {{WorkingWithAuth_HostAddress}}/account/register
+Content-Type: application/json
+
+{
+  "username": "gill@snowball.be",
+  "password": "Password&01?",
+  "email": "gill@snowball.be"
+}
+
+### Login and retrieve tokens
+POST {{WorkingWithAuth_HostAddress}}/account/login
+Content-Type: application/json
+
+{
+  "username": "gill@snowball.be",
+  "password": "Password&01?",
+  "email": "gill@snowball.be"
+}
+
+### Make authenticated call
+GET {{WorkingWithAuth_HostAddress}}/weatherforecast/
+Authorization: Bearer CfDJ8HLIFmuR-plAouoDQVtvQHcVjOBA_ilnY1elYYzZcbMvdopgbqDWTozBJLnLK5TynScycz_gouE-0v3EP8IH1OLGvzExmZd4eDGoiZg1jWtGcuidIjsrjCFEtzx4BQ9vSAE44Iy-CMDEN2wpCs2gRAMZ0nGn8_GEuw-K1pAJC4vUouK3BcnDHFE83pDjVdTIuXU4ALpFv8OPKBf_cYcgfbwdxd7Cp7Tib0cB1x-5YazaeE7QDuG1G4vDP7HBDo0NATba1fCFsCYCnTorB1bYYO8-SgwRSqRMufQsa1VZQz8n907xdyEAF6o-ob2KuQFlgzs_N5zjU32AS9z8CuIKPHzYlFmyZcCzEs7xXq1_Y4KSVrRfQEKA226Cd1XbitqaehfVNqG93ccP59Zmp2kklr3im2ei7MFifeMFrqyTuGoo2eNXKQyaBHXo_uvrEiMvjLb9Pi1tZfYIQeCWy6HSR8eh5bsFVkbMfAxXkJZt6GbDL2lNQ64yGSxcY0XzHOP6YEapTf7_HR91zUWwTma792BRcQH2qBi-BxFTdiSyyyaArCGaKROMjcEb4ljlXQKqLX10hKhRJ5AMmFOc1UU-cxWggi_oPaTmzrgcRXDfGgSVApE4ZAiWQFOC3-0xjDarGN9PEp0B9NWzjQTX8J11DNW4I7kQNWDUzUkb8dODFFsg78AdzzYXyulJY7Rdn1Hu5g

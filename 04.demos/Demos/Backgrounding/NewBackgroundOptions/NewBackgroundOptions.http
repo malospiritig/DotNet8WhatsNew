@@ -1,0 +1,6 @@
+@NewBackgroundOptions_HostAddress = http://localhost:5261
+
+GET {{NewBackgroundOptions_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
